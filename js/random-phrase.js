@@ -12,5 +12,5 @@ request.onload = function() {
     // add the random line in a div
     document.getElementById( 'random-phrase' ).innerHTML = randomLine;
 };
-request.open( 'GET', 'http://mackeydl.github.io/media/text.txt', true );
+request.open( 'GET', 'src=/media/text.txt', true );
 request.send();
