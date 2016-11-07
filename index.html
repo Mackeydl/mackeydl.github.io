@@ -19,24 +19,23 @@
 				</header>
 				<footer>
 			<!-- Scripts -->
-		<script>
-		var request = new XMLHttpRequest();
-		request.onload = function() {
-		    // get the file contents
-		    var fileContent = this.responseText;
-		    // split into lines
-		    var fileContentLines = fileContent.split( '\n' );
-		    // get a random index (line number)
-		    var randomLineIndex = Math.floor( Math.random() * fileContentLines.length );
-		    // extract the value
-		    var randomLine = fileContentLines[ randomLineIndex ];
-
-		    // add the random line in a div
-		    document.getElementById( 'random-phrase' ).innerHTML = randomLine;
-		};
-		request.open( 'GET', src="media/text.txt", true );
-		request.send()
-	</script>
+<script>
+var request = new XMLHttpRequest();
+request.onload = function() {
+		// get the file contents
+		var fileContent = this.responseText;
+		// split into lines
+		var fileContentLines = fileContent.split( '\n' );
+		// get a random index (line number)
+		var randomLineIndex = Math.floor( Math.random() * fileContentLines.length );
+		// extract the value
+		var randomLine = fileContentLines[ randomLineIndex ];
+		// add the random line in a div
+		document.getElementById( 'random-phrase' ).innerHTML = randomLine;
+};
+request.open( 'GET', src="media/text.txt", true );
+request.send()
+</script>
 					<a href="http://github.com/mackeydl" class="button">Github</a>
 					<a href="http://steamcommunity.com/id/tipofthehatsorg/" class="button">Steam </a>
 					<a href="http://youtube.com/channel/UCA8yHMkrQM9RikenDtSf0OA" class="button">Youtube</a>
