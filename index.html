@@ -18,10 +18,18 @@
 					<h1>mackey</h1>
 				</header>
 				<footer>
-			<!-- Scripts -->
-<script>
-var request = new XMLHttpRequest();
-request.onload = function() {
+					<a href="http://github.com/mackeydl" class="button">Github</a>
+					<a href="http://steamcommunity.com/id/tipofthehatsorg/" class="button">Steam </a>
+					<a href="http://youtube.com/channel/UCA8yHMkrQM9RikenDtSf0OA" class="button">Youtube</a>
+					<a href="music.html" class="button">MP3</a>
+					<br>
+	       				<h1 align="center" id="random-phrase"></h1>
+				</footer>
+	 </section>
+					<!-- Scripts -->
+	<script>
+	var request = new XMLHttpRequest();
+	request.onload = function() {
 		// get the file contents
 		var fileContent = this.responseText;
 		// split into lines
@@ -36,20 +44,6 @@ request.onload = function() {
 request.open( 'GET', src="media/text.txt", true );
 request.send()
 </script>
-					<a href="http://github.com/mackeydl" class="button">Github</a>
-					<a href="http://steamcommunity.com/id/tipofthehatsorg/" class="button">Steam </a>
-					<a href="http://youtube.com/channel/UCA8yHMkrQM9RikenDtSf0OA" class="button">Youtube</a>
-					<a href="music.html" class="button">MP3</a>
-					<br>
-	       				<h1 align="center" id="random-phrase"></h1>
-				</footer>
-	 </section>
-	 <!-- Script = 	<script>
-	    var vid = document.getElementById("Audio");
-	 	 vid.volume = 0;
-	 	 x.play();
-	 </script>
- 		-->
 	 <!-- jQuery -->
 	 <script src="js/jquery.js"></script>
 	 <!-- Bootstrap Core JavaScript -->
