@@ -4,7 +4,6 @@
 "Can I Have Some Money Bruh"
 "What Did You Just Say To Me"
 "Dank Memes"
-"You're Retarded"
 "Books Out For Harambe"
 "Broom Broom Microwave"
 "I'm In"
@@ -18,3 +17,4 @@
 "DeSU"
 "The All New OxyClean!"
 "Hiragami"
+"Error 404"
