@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/js/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"/>
+<script type="text/javascript" src="/assets/c20f32a9/jquery.js"></script>
+<script type="text/javascript" src="/assets/c20f32a9/jui/js/jquery-ui.min.js"></script>
+<title>YouTube MP3 Script</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Convert Youtube to mp3 script. Free, easy to integrate and lightweight youtube downloader based on javascript.">
+
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/css/docs.css" rel="stylesheet">
+<link href="/css/custom.css" rel="stylesheet">
+<link href="/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<div id="wrap">
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="brand" href="/">YoutubeMP3Script.com</a>
+<div class="nav-collapse collapse">
+<ul class="nav">
+<li class="active">
+<a href="/">Home</a>
+</li>
+<li>
+<a href="/contacts.html">Contact Us</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar-push"></div>
+<div class="jumbotron masthead">
+<div class="container">
+<h1>Youtube To Mp3 Script</h1>
+<p>High quality youtube to mp3 conversion script integration without a hassle.</p>
+<p>
+<a href="http://www.yt-mp3.com/watch?v=7N8b3NZSJoY&logo=http%3A%2F%2Fwww.youtubemp3script.com%2Fimg%2Flogo-example.png" onClick="return YoutubeMp3Script(this)" class="bt2">Try it!</a>
+<a href="#howTo" class="bt2 bt22 scroll">How to integrate?</a>
+</p>
+</div>
+</div>
+<div class="bs-docs-social">
+<div class="container">
+<ul class="bs-docs-social-buttons">
+<li>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.youtubemp3script.com" data-text="Download youtube as mp3">Tweet</a>
+</li>
+<li>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.youtubemp3script.com&amp;width=145&amp;height=20&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden;
+            width:145px; height:20px;" allowTransparency="true"></iframe>
+</li>
+<li>
+
+<div class="g-plusone" data-size="medium"></div>
+
+<script type="text/javascript">
+                    (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+</li>
+</ul>
+</div>
+</div>
+<div class="why">
+<div class="container">
+<ul>
+<li><a href="#youtube-download-button-generator">Youtube download button <b>generator</b></a></li>
+<li><a href="#how-to-integreate-popup"><b>Popup</b> integration</a></li>
+<li><a href="#integrate-it-simpler">Link integration (<b>Direct</b> Youtube download button)</a></li>
+<li><a href="#integrate-api"><b>API</b> integration <small>(For mobile apps)</small></a></li>
+</ul>
+</div>
+</div>
+<hr id="youtube-download-button-generator"/>
+<div class="why button-generator">
+<div class="container">
+<span class="h2 title-dark">Youtube <span>Download Button</span> Generator</span>
+<div class="row-fluid">
+<div class="span6">
+<form class="form-horizontal">
+<div class="control-group">
+<label for="button-id" class="control-label">Youtube video URL/ID</label>
+<div class="controls">
+<input type="text" name="id" id="button-id" class="form-control" value="7N8b3NZSJoY">
+<small class="help-block">(youtube url or id, make sure it is <a href="http://www.url-encode-decode.com/">urlencoded</a>)</small>
+</div>
+</div>
+<div class="control-group">
+<label for="button-width" class="control-label">Width</label>
+<div class="controls controls-row">
+<input type="number" name="width" id="button-width" class="form-control span5" value="320">
+<select name="width-type" id="button-width-type" class="form-control span2">
+<option>px</option>
+<option>%</option>
+</select>
+<div class="clearfix"></div>
+<small class="help-block">(Minimum width is 300px)</small>
+</div>
+</div>
+<div class="control-group">
+<label for="button-height" class="control-label">Height</label>
+<div class="controls">
+<div class="input-append">
+<input type="number" name="height" id="button-height" class="form-control" value="100">
+<span class="add-on">px</span>
+</div>
+<small class="help-block">(Height should not be lower than 100px)</small>
+</div>
+</div>
+<div class="control-group">
+<label for="button-background" class="control-label">Background</label>
+<div class="controls">
+<input type="text" name="background" id="button-background" class="form-control" value="">
+<small class="help-block">(Leave empty for transparent)</small>
+</div>
+</div>
+<div class="control-group">
+<label for="button-language" class="control-label">Language</label>
+<div class="controls">
+<select name="language" id="button-language">
+<option value="">English</option>
+<option value="ar">Arabic</option>
+<option value="cs">Czech</option>
+<option value="es">Spanish</option>
+<option value="fr">French</option>
+<option value="id">Indonesian</option>
+<option value="it">Italian</option>
+<option value="lt">Lithuanian</option>
+<option value="pt">Portuguese</option>
+<option value="ru">Russian</option>
+<option value="zh">Chinese</option>
+</select>
+<small class="help-block">(Can't find your language? Please contact us!)</small>
+</div>
+</div>
+<div class="control-group">
+<label for="button-download-video" class="control-label">Download video</label>
+<div class="controls">
+<input type="checkbox" name="download-video" id="button-download-video" class="form-control" value="true">
+</div>
+</div>
+</form>
+</div>
+<div class="span6 button-preview">
+<div class="button-preview-script">
+<iframe src="http://embed.yt-mp3.com/watch?v=7N8b3NZSJoY" style="width: 400px; height: 100px; border: 0; background: #fff"></iframe>
+</div>
+<div class="button-preview-code">
+<small>Copy This code to your website:</small>
+<textarea class="input-block-level" rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr id="how-to-integreate-popup"/>
+<div class="why" id="howTo">
+<div class="container">
+<div class="row-fluid">
+<div class="span4">
+<span class="h2 title-dark">How to <span>integrate a Popup?</span></span>
+<p>
+Let your users to convert video in a separate window. You can set your <b>own logo</b> and link too!
+</p>
+</div>
+<div class="span8">
+<img src="/img/converter.PNG" alt="converter example">
+</div>
+</div>
+<br/>
+<div class="row-fluid">
+<div class="example">
+<pre class="prettyprint linenums">&lt;head&gt;
+    ...
+    &lt;script src="http://www.youtubemp3script.com/api/youtubemp3script-v1.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</pre>
+</div>
+<div class="docs">
+First of all you need to include javascript file in your page header. This library was made as small as possible and it will not impact your page load time.<br/>
+<em>Optional: You can download script from the following location
+<a href="http://www.youtubemp3script.com/api/youtubemp3script-v1.js">http://www.youtubemp3script.com/api/youtubemp3script-v1.js</a> and store it on your own server.
+</em>
+</div>
+</div>
+<hr id="how-to-use"/>
+<div class="row-fluid">
+<span class="h2 title-dark">How to <span>use?</span></span>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://www.yt-mp3.com/watch?v=<span class="b">YOUTUBE_ID</span>"
+   onClick="return YoutubeMp3Script(this)"&gt;
+    Download MP3
+&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+When script is added, you can add as many youtube to mp3 download links as you want.
+You only need to edit following attribute:<br/>
+<code>YOUTUBE_ID</code> - set youtube video id or encoded youtube url.
+</p>
+</div>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://www.yt-mp3.com/watch?v=<span class="b">7N8b3NZSJoY</span>" onClick="return YoutubeMp3Script(this)"&gt;Download MP3&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+<span class="b">Try it:</span>
+<a href="http://www.yt-mp3.com/watch?v=7N8b3NZSJoY" onClick="return YoutubeMp3Script(this)">
+Download MP3
+</a>
+</p>
+</div>
+<div class="docs">
+<p>
+Example with encoded youtube url:
+</p>
+</div>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://www.yt-mp3.com/watch?v=<span class="b">https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7N8b3NZSJoY</span>"
+   onClick="return YoutubeMp3Script(this)"&gt;
+    Download MP3
+&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+<span class="b">Try it:</span>
+<a href="http://www.yt-mp3.com/watch?v=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7N8b3NZSJoY" onClick="return YoutubeMp3Script(this)">
+Download MP3
+</a>
+</p>
+<em>Note - </em><code>https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7N8b3NZSJoY</code> is encoded youtube url of <code>https://www.youtube.com/watch?v=7N8b3NZSJoY</code>. <br/>
+You can use this tool, to encode url online: <a href="http://meyerweb.com/eric/tools/dencoder/" target="_blank">http://meyerweb.com/eric/tools/dencoder/</a><br/>
+Or use php urlencode function on serverside <a href="http://www.php.net/urlencode" target="_blank">http://www.php.net/urlencode/</a>
+</div>
+</div>
+<hr/>
+<span class="h2 title-dark">Add your own <span>LOGO!</span></span>
+<div class="row-fluid">
+<div class="docs">
+<p>
+You can make your users comfortable by adding your own logo to the converter script. Users won't event recognise that they are using different service for youtube to mp3 converting.
+</p>
+</div>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://api.yt-mp3.com/watch?v=<span class="b">YOUTUBE_ID</span>&logo=<span class="b">LOGO_URL</span>&link=<span class="b">LINK_URL</span>"
+    onClick="return YoutubeMp3Script(this)" &gt;
+    Download MP3
+&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+<code>LOGO_URL</code> - set your logo url here, it should be URL encoded.<br/>
+<code>LINK_URL</code> - set your website url here.(Optional)<br/>
+<em>You can encode url online using this link:
+<a href="http://www.url-encode-decode.com/">http://www.url-encode-decode.com/</a></em>
+<br/>
+Logo best looks then image size is less than 290px on width and 90px on height.
+</p>
+</div>
+</div>
+<div class="row-fluid">
+<div class="docs">
+<p>
+<span class="b">Try it:</span>
+<a href="http://api.yt-mp3.com/watch?v=7N8b3NZSJoY&logo=http%3A%2F%2Fwww.youtubemp3script.com%2Fimg%2Flogo-example.png" onClick="return YoutubeMp3Script(this)">
+http://api.yt-mp3.com/watch?v=7N8b3NZSJoY&logo=http%3A%2F%2Fwww.youtubemp3script.com%2Fimg%2Flogo-example.png
+</a><br/>
+</p>
+</div>
+<div class="example">
+In this example we have changed logo to this image:<br/>
+<img src="/img/logo-example.png" alt="music logo example"/>
+</div>
+</div>
+<hr id="integrate-it-simpler"/>
+<span class="h2 title-dark">Can I integrate it <span>simpler?</span></span>
+<div class="row-fluid">
+<p>
+Yes! You can skip all the scripts and let users download with a simple link.
+</p>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://www.yt-mp3.com/watch?v=<span class="b">YOUTUBE_ID</span>"&gt;Download MP3&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+<code>YOUTUBE_ID</code> - set youtube video id or encoded youtube url here<br/>
+</p>
+</div>
+<div class="docs">
+<p>
+You can also open link in a new tab by adding <code>target="_blank"</code> attribute.
+</p>
+</div>
+<div class="example">
+<pre class="prettyprint linenums">&lt;a href="http://www.yt-mp3.com/watch?v=<span class="b">7N8b3NZSJoY</span>" target="<span class="b">_blank</span>"&gt;Download MP3&lt;/a&gt;</pre>
+</div>
+<div class="docs">
+<p>
+<span class="b">Try it:</span>
+<a href="http://www.yt-mp3.com/watch?v=7N8b3NZSJoY" target="_blank">
+Download MP3
+</a>
+</p>
+</div>
+</div>
+<hr id="integrate-api"/>
+<span class="h2 title-dark">Can I use <span>API?</span></span>
+<div class="row-fluid">
+<div class="docs">
+<p>
+API allows you to check, if specific youtube video was converted on our servers. You can also schedule video for a conversion.
+<br/>
+Calling api is as simple as sending <code>GET</code> request to <code>http://www.yt-mp3.com/fetch?v=7N8b3NZSJoY&apikey=1234567</code>
+<br>
+We provide details such as:
+</p>
+<pre class="prettyprint linenums">{
+    "status": "ok",
+    "id": "7N8b3NZSJoY",
+    "title": "Steve Jobs FUNNIEST moments (1978-2011)",
+    "thumbnail": "https:\/\/i.ytimg.com\/vi\/7N8b3NZSJoY\/hqdefault.jpg",
+    "length": 457,
+    "artist": "EverySteveJobsVideo",
+    "categories": "People & Blogs",
+    "bitrate": "148",
+    "average_rating": "4.917",
+    "view_count": "539540",
+    "progress": 100,
+    "ready": true,
+    "expires": 1468761047,
+    "url": "\/\/dl2.yt-mp3.com\/download\/steve-jobs-funniest-moments-1978-2011.mp3?id=7N8b3NZSJoY&title=Steve+Jobs+FUNNIEST+moments+%281978-2011%29&t=1468746647&extra=a&h=2be5e2dc...",
+    "video_url": "\/\/dl2.yt-mp3.com\/download\/video\/steve-jobs-funniest-moments-1978-2011.mp3?id=7N8b3NZSJoY&title=Steve+Jobs+FUNNIEST+moments+%281978-2011%29&t=1468746647&extra=a&h=2be5e2dc..."
+}
+                </pre>
+<p>To use it, please contact us. You need to provide how much users do you have and we will decide which plan suits you best.</p>
+<p>Using our api without api key is prohibited. App can be banned without a notice.</p>
+</div>
+</div>
+<hr/>
+<span class="h2 title-dark">Any <span>questions?</span></span>
+<div class="docs">
+<p>
+Don't want ads? Or you don't like waiting in a queue for a video to be converted?<br>
+If you have any questions or you are having troubles while trying to integrate this script, please do not hesitate and contact us at <a href="mailto:info@youtubemp3script.com">info@youtubemp3script.com</a> or use our contact form <a href="/contacts.html" class="b">HERE</a>.
+</p>
+</div>
+<div id="push"></div>
+</div>
+</div></div>
+
+<footer class="footer" id="footer">
+<div class="container">
+<p>youtubemp3script.com © 2016</p>
+</div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/api/youtubemp3script-v1.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script src="/js/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="/js/application.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-44072240-1', 'youtubemp3script.com');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
