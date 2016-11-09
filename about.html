@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+  <style>
+body {margin:0;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.6;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  opacity: 0.6;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+  opacity: 0.6;
+}
+.active {
+  background-color: #3768cc;
+  opacity: 0.6;
+}
+</style>
+<body>
+
+<ul>
+  <li><a href="index">Home</a></li>
+  <li><a href="music">Music</a></li>
+  <li><a class="active" href="test">Test</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</body>
+		<title>Mackey</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="shortcut icon" href="websiteimage.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<div id="background">
+	<img src="pics/city.jpg" autoplay muted loop class="stretch" alt="" />
+	</div>
+</head>
+	<body>
+			<section id="header" class="dark">
+				<header>
+					<h1>mackey</h1>
+				</header>
+				<footer>
+          <a onclick="aud1_play_pause()" class="button">Good</a>
+					<a onclick="aud2_play_pause()" class="button">Mix </a>
+					<a onclick="aud3_play_pause()" class="button">Escape </a>
+					<a button onclick="goBack()" class="button">Back</a>
+					<br>
+	       <h1 align="center" id="random-phrase"></h1>
+				</footer>
+	 </section>
+	 <!-- Audio -->
+	 <audio id="audio1">
+		 <source src="media/video.mp4" type="audio/mp4"
+	 </audio>
+	<audio id="audio2">
+		<source src="media/mix.mp3" type="audio/mpeg"
+	</audio>
+	<audio id="audio3">
+		<source src="media/chillmix.mp3" type="audio/mpeg"
+	</audio>
+	 <!-- Script = 	<script>
+	    var vid = document.getElementById("Audio");
+	 	 vid.volume = 0;
+	 	 x.play();
+	 </script>
+ 		-->
+		<!-- Scripts -->
+<script>
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<!-- Math Script -->
+<script>
+var request = new XMLHttpRequest();
+request.onload = function() {
+		// get the file contents
+		var fileContent = this.responseText;
+		// split into lines
+		var fileContentLines = fileContent.split( '\n' );
+		// get a random index (line number)
+		var randomLineIndex = Math.floor( Math.random() * fileContentLines.length );
+		// extract the value
+		var randomLine = fileContentLines[ randomLineIndex ];
+		// add the random line in a div
+		document.getElementById( 'random-phrase' ).innerHTML = randomLine;
+};
+request.open( 'GET', src="media/text.txt", true );
+request.send()
+</script>
+	 <!-- jQuery -->
+	 <script src="js/jquery.js"></script>
+   <script src="js/jquery.min.js"></script>
+	 <!-- Bootstrap Core JavaScript -->
+	 <script src="js/bootcamp.min.js"></script>
+	 <script src="js/navshrink.js"></script>
+	</body>
+</html>
