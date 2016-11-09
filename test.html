@@ -40,6 +40,19 @@ li a:hover:not(.active) {
   opacity: 0.6;
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+#panel {
+    display: none;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
 <body>
 
 <ul>
@@ -65,24 +78,14 @@ li a:hover:not(.active) {
 					<h1>mackey</h1>
 				</header>
 				<footer>
-          <a onclick="aud1_play_pause()" class="button">Good</a>
-					<a onclick="aud2_play_pause()" class="button">Mix </a>
-					<a onclick="aud3_play_pause()" class="button">Escape </a>
-					<a button onclick="goBack()" class="button">Back</a>
-					<br>
-	       <h1 align="center" id="random-phrase"></h1>
-				</footer>
+<!--          <a button onclick="goBack()" class="button">Back</a> -->
+					<div id="flip" class="button">Show</a>
+						<br>
+						<video controls src="media/toth.mp4" div id="panel"></video>
+				 <h4 allign="center"> Credit To TipOfTheHats.org </h4>
+			 </footer>
+			 	       <h1 align="center" id="random-phrase"></h1>
 	 </section>
-	 <!-- Audio -->
-	 <audio id="audio1">
-		 <source src="media/video.mp4" type="audio/mp4"
-	 </audio>
-	<audio id="audio2">
-		<source src="media/mix.mp3" type="audio/mpeg"
-	</audio>
-	<audio id="audio3">
-		<source src="media/chillmix.mp3" type="audio/mpeg"
-	</audio>
 	 <!-- Script = 	<script>
 	    var vid = document.getElementById("Audio");
 	 	 vid.volume = 0;
