@@ -183,29 +183,30 @@ li a:hover:not(.active) {
 					<body>
 
 					<h2>Modal Login Form</h2>
-					<p id="answerthing">
 
 					<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 					<div id="id01" class="modal">
 
-					  <form class="modal-content animate" action="answerthing">
+					  <form class="modal-content animate" action="action_page.php">
 					    <div class="imgcontainer" style="background-color:#414449">
 					      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 					      <img src="pics/lock512.png" alt="Avatar" class="avatar">
 					    </div>
 					    <div class="container"style="background-color:#414449">
 					      <label><b>Username</b></label>
-					      <input type="text" placeholder="Enter Username" required>
+					      <input type="text" placeholder="Enter Username" name="uname" required>
+
+					      <label><b>Password</b></label>
+					      <input type="password" placeholder="Enter Password" name="psw" required>
 
 					      <button class="submit">Login</button>
-								<script>
-document.getElementById("modal-content").innerHTML =
-  else if(answerthing == '=') {
-   var equation = inputVal;
-   var lastChar = equation[equation.length - 1];
- }
-	 </script>
+<br>
+					      <input type="checkbox" checked="checked"> Remember me</div>
+
+					    <div class="container" style="background-color:#414449">
+					      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					      <span class="psw">Forgot <a href="#">password?</a></span>
 					    </div>
 					  </form>
 					</div>
