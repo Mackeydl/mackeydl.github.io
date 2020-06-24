@@ -1,0 +1,60 @@
+  	button {
+  		position: relative;
+  		display: inline-block;
+      background: inherit;
+  		padding: 0.85% 2.5% 0.85% 2.5%;
+  		border-radius: 4%;
+  		cursor: pointer;
+  		border: 0;
+  		color: #fff;
+  		text-align: center;
+  		text-decoration: none;
+  	}
+
+    .increase {
+      background: #2980B9;
+    }
+
+		.increase:hover {
+			background: #1F618D;
+		}
+
+    .decrease {
+      background: #CD6155;
+    }
+
+    .decrease:hover {
+      background: #922B21
+    }
+
+/* Body TRBL*/
+    body {
+      font-family: Tahoma, Geneva, sans-serif;
+      color: #C9D9E1;
+      background-color: #141B1F;
+    }
+
+    .currenttemp {
+      padding: 1% 0% 0% 35%;
+      font-size: 85px;
+      align: center;
+      margin-bottom: -20px;
+    }
+
+    .actualtemp {
+      margin-left: 44%;
+      font-size: 20px;
+      align: center;
+      color: #5D6D7E;
+    }
+
+  .fanheading {
+    padding: 0% 0% 0% 7%;
+  }
+
+  .box {
+  width: 375px;
+  border: 2px solid #E7A93E;
+  padding: 0px;
+  margin: 0px;
+}
