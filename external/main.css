@@ -80,8 +80,8 @@
     }
 
     .currenttemp {
-      padding: 1% 0% 0% 35%;
-      font-size: 85px;
+      padding: 1% 0% 0% 22%;
+      font-size: 70px;
       align: center;
       margin-bottom: -20px;
     }
@@ -95,6 +95,7 @@
 
     .box {
     width: 375px;
+    height: 250px;
     border: 2px solid #E7A93E;
     padding: 0px;
     margin: 0px;
